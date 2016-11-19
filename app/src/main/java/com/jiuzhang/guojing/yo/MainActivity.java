@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Animation animation = AnimationUtils.loadAnimation(this, R.anim.text_anim);
         final EditText editText = (EditText)findViewById(R.id.name);
-        // TODO set up Buttons
+
         final Button yo = (Button)findViewById(R.id.btn_1);
         final Button mo = (Button)findViewById(R.id.btn_2);
         final Button yoyo = (Button)findViewById(R.id.btn_3);
@@ -26,33 +26,31 @@ public class MainActivity extends AppCompatActivity {
         yo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                yo.setAnimation(animation);
+                yo.startAnimation(animation);
                 Toast.makeText(MainActivity.this,yo.getText() +" "+ editText.getText(),Toast.LENGTH_SHORT).show();
             }
         });
         mo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mo.setAnimation(animation);
+                mo.startAnimation(animation);
                 Toast.makeText(MainActivity.this,mo.getText() + " " + editText.getText(),Toast.LENGTH_SHORT).show();
             }
         });
         yoyo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                yoyo.setAnimation(animation);
+                yoyo.startAnimation(animation);
                 Toast.makeText(MainActivity.this,yoyo.getText() + " " + editText.getText(),Toast.LENGTH_SHORT).show();
             }
         });
         or.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                or.setAnimation(animation);
+                or.startAnimation(animation);
                 Toast.makeText(MainActivity.this,or.getText() + " " + editText.getText(),Toast.LENGTH_SHORT).show();
             }
         });
-        // find the Buttons you declared in the layout file by their ids
-        // set up the click event listeners of the buttons
-        // in each of the click event functions, display a toast that shows the text of the EditText
+
     }
 }
